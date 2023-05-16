@@ -1,17 +1,27 @@
 package br.com.taskme.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import lombok.Getter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
 @Getter
 @Document(collection = "db_users")
 public class Users {
 
   @Id
   private String id;
+
+  private String _class;
+  
   private String name;
+
+  @Indexed(unique = true)
   private String email;
 
   public Users() {}
