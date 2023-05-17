@@ -17,6 +17,7 @@ public class Users {
   @Id
   private String id;
 
+  @JsonIgnore
   private String _class;
   
   private String name;
