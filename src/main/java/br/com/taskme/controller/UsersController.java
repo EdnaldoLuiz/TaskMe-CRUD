@@ -56,4 +56,10 @@ public class UsersController {
     }
   }
 
+  @GetMapping(value = "/")
+  public String test() {
+    return "Hi";
+  }
+
+
 }
