@@ -20,19 +20,19 @@ public class UsersController {
   @Autowired
   private UsersRepository repository;
 
-  @GetMapping(value = "/get")
+  @GetMapping(value = "/users")
   public List<Users> getUsers() {
     List<Users> users = repository.findAll();
     return users;
   }
 
-  @PostMapping(value = "/create")
+  @PostMapping(value = "/users")
   public Users enviarLinguagem(@RequestBody Users users) {
     Users savedUsers = repository.save(users);
     return savedUsers;
   }
 
-  @PutMapping(value = "/update/{email}")
+  @PutMapping(value = "/users/{email}")
   public Users updateUserByEmail(@PathVariable("email") String email, @RequestBody Users updatedUser) {
     Users existingUser = repository.findByEmail(email);
 
@@ -45,7 +45,7 @@ public class UsersController {
     return existingUser;
   }
 
-  @DeleteMapping(value = "/delete/{email}")
+  @DeleteMapping(value = "/users/{email}")
   public String deleteUser(@PathVariable("email") String email) {
     Users user = repository.findByEmail(email);
     if (user != null) {
