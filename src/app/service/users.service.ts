@@ -11,18 +11,18 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/users`);
+    return this.http.get(`${this.baseUrl}`);
   }
 
   createUser(user: any): Observable<any> {
-    return this.http.post(`${this.baseUrl}/users`, user);
+    return this.http.post(`${this.baseUrl}`, user);
   }
 
   updateUser(email: string, user: any): Observable<any> {
-    return this.http.put(`${this.baseUrl}/users/${email}`, user);
+    return this.http.put(`${this.baseUrl}/${email}`, user);
   }
 
   deleteUser(email: string): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/users/${email}`);
+    return this.http.delete(`${this.baseUrl}/${email}`);
   }
 }
