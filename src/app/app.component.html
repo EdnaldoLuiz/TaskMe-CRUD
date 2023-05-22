@@ -1,7 +1,9 @@
-<mat-toolbar style:color="primary">
+<mat-toolbar [style.color]="'primary'">
   <span>Users Task Me</span>
   <span class="example-spacer"></span>
   <button mat-raised-button>
     ADD USER
   </button>
 </mat-toolbar>
+
+<router-outlet></router-outlet>

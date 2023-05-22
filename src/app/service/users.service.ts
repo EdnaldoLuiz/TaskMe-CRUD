@@ -1,26 +1,28 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ApiResponse } from '../model/api.response';
-import { HttpClient} from '@angular/common/http';
-import { Users} from 'src/app/model/users.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
+  private baseUrl = 'https://taskme-crud-production.up.railway.app/users'; // substitua pela URL do seu backend
 
   constructor(private http: HttpClient) { }
-  baseUrl: String = 'http://localhost:8080/';
 
-  getUsers() : Observable<ApiResponse> {
-    return this.http.get<ApiResponse>(this.baseUrl);
+  getUsers(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/users`);
   }
 
-  getUserByEmail(email: String): Observable<any> {
-    return this.http.get(this.baseUrl + email);
+  createUser(user: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/users`, user);
   }
 
-  createUser(user: Users): Observable<ApiResponse> {
-    return this.http.post<ApiResponse>(this.baseUrl, user);
+  updateUser(email: string, user: any): Observable<any> {
+    return this.http.put(`${this.baseUrl}/users/${email}`, user);
+  }
+
+  deleteUser(email: string): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/users/${email}`);
   }
 }

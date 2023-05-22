@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
-
-  ];
+  { path: '', redirectTo: '/users', pathMatch: 'full' },
+  { path: 'users', component: UsersComponent },
+  // outras rotas do seu aplicativo
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
