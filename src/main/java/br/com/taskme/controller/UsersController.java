@@ -9,7 +9,7 @@ import br.com.taskme.model.Users;
 import br.com.taskme.service.UsersRepository;
 
 @RestController
-@CrossOrigin (origins ="*")
+//@CrossOrigin (origins ="*")
 public class UsersController {
 
   @Autowired
