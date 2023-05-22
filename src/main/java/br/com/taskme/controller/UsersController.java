@@ -9,7 +9,8 @@ import br.com.taskme.model.Users;
 import br.com.taskme.service.UsersRepository;
 
 @RestController
-//@CrossOrigin (origins ="*")
+@RequestMapping("/api/users")
+@CrossOrigin (origins ="http://localhost:4200/users")
 public class UsersController {
 
   @Autowired
