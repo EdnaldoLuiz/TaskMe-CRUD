@@ -1,6 +1,6 @@
 package br.com.taskme.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -22,7 +22,7 @@ public class Users {
   @JsonIgnore
   private String _class;
 
-  private LocalDateTime data_criacao = LocalDateTime.now();
+  private LocalDate data_criacao = LocalDate.now();
   
   private String name;
 
@@ -31,7 +31,7 @@ public class Users {
 
   public Users() {}
 
-  public Users(String id, LocalDateTime data, String name, String email) {
+  public Users(String id, LocalDate data, String name, String email) {
     this.name = name;
     this.email = email;
     this.id = id;
