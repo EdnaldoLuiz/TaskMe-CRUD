@@ -15,7 +15,7 @@
       <td>{{ user.email }}</td>
       <td>{{ user.data_criacao }}</td>
       <td>
-        <button class="delete-button" (click)="deleteUser(user.email)">Excluir</button>
+        <button class="delete-button" (click)="exibirPopupExclusao(user.email)">Excluir</button>
         <button class="update-button" (click)="updateUser(user.email, { name: 'Novo Nome', email: 'novoemail@example.com' })">Atualizar</button>
       </td>
     </tr>
