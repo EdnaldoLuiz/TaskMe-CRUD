@@ -1,17 +1,23 @@
 <h2>Usuários</h2>
 
-<table>
+<table class="custom-table">
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Ações</th>
+      <th class="column-lightgray">Nome</th>
+      <th class="column-lightgray">Email</th>
+      <th class="column-lightgray">Data Criação</th>
+      <th class="column-lightgray">Ações</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of users">
+    <tr *ngFor="let user of users; let i = index" [ngClass]="{'row-lightgray': i % 2 === 1}">
       <td>{{ user.name }}</td>
       <td>{{ user.email }}</td>
+      <td>{{ user.data_criacao }}</td>
       <td>
-        <button (click)="deleteUser(user.email)">Excluir</button>
-        <button (click)="updateUser(user.email, { name: 'Novo Nome', email: 'novoemail@example.com' })">Atualizar</button>
+        <button class="delete-button" (click)="deleteUser(user.email)">Excluir</button>
+        <button class="update-button" (click)="updateUser(user.email, { name: 'Novo Nome', email: 'novoemail@example.com' })">Atualizar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
