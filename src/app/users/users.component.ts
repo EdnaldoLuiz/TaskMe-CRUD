@@ -50,6 +50,7 @@ export class UsersComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.deleteUser(email);
+        document.body.style.overflow = 'hidden';
       }
     });
   }
