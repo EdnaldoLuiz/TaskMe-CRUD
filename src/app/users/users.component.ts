@@ -3,6 +3,7 @@ import { UsersService } from '../service/users.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ExclusaoComponente } from '../service/users.popup.delete';
 
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -51,9 +52,13 @@ export class UsersComponent implements OnInit {
       if (result) {
         this.deleteUser(email);
         document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+          location.reload(); // Recarrega a página após 3 segundos (3000 milissegundos)
+        }, 300);
       }
     });
   }
+  
   
 
   createUser(user: any) {
