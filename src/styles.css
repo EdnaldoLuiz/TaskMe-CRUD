@@ -18,4 +18,8 @@
     z-index: 9999 !important;
   }
 
+  .delete-icon {
+    width: 20px;
+  }
+
   
