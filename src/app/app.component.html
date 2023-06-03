@@ -1,7 +1,17 @@
-<mat-toolbar [style.color]="'primary'">
-  <span>TaskMe</span>
-  <span class="example-spacer"></span>
-  <button mat-raised-button>ADD USER</button>
-</mat-toolbar>
+<div class="sidebar">
+  <ul class="sidebar-menu">
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+  </ul>
+</div>
 
-<app-users></app-users>
+<div class="content">
+  <mat-toolbar [style.color]="'primary'">
+    <span>Usuários</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button (click)="createNewUser()"><i class="fas fa-user-plus"></i>Adicionar</button>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+</div>

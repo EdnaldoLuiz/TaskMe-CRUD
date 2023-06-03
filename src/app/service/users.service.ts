@@ -6,23 +6,25 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsersService {
-  private baseUrl = 'https://taskme-crud-production.up.railway.app/users'; // substitua pela URL do seu backend
+  private baseUrl = 'https://taskme-crud-production.up.railway.app/users';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getUsers(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`);
+  getUsers(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseUrl);
   }
 
-  createUser(user: any): Observable<any> {
-    return this.http.post(`${this.baseUrl}`, user);
+  createUser(newUser: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl, newUser);
   }
 
   updateUser(email: string, user: any): Observable<any> {
-    return this.http.put(`${this.baseUrl}/${email}`, user);
+    const url = `${this.baseUrl}/${encodeURIComponent(email)}`;
+    return this.http.put<any>(url, user);
   }
 
   deleteUser(email: string): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${email}`);
+    const url = `${this.baseUrl}/${encodeURIComponent(email)}`;
+    return this.http.delete<any>(url);
   }
 }

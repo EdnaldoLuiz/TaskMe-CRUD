@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../service/users.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ExclusaoComponente } from '../service/users.popup.delete';
-
+import { CreateUserComponent } from '../create-user/create-user.component';
 
 @Component({
   selector: 'app-users',
@@ -10,12 +10,25 @@ import { ExclusaoComponente } from '../service/users.popup.delete';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  users!: any[];
+  users: any[];
 
-  constructor(private usersService: UsersService, public dialog: MatDialog) {}
+  constructor(private usersService: UsersService, public dialog: MatDialog) {
+    this.users = [];
+  }
 
   ngOnInit() {
     this.getUsers();
+  }
+
+  createUser(newUser: any) {
+    this.usersService.createUser(newUser).subscribe(
+      (data) => {
+        this.getUsers();
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
   getUsers() {
@@ -30,14 +43,14 @@ export class UsersComponent implements OnInit {
   }
 
   deleteUser(email: string) {
-    this.usersService.deleteUser(email).subscribe({
-      next: (data) => {
+    this.usersService.deleteUser(email).subscribe(
+      (data) => {
         this.getUsers();
       },
-      error: (error) => {
+      (error) => {
         console.log(error);
       }
-    });
+    );
   }
 
   exibirPopupExclusao(email: string) {
@@ -47,7 +60,7 @@ export class UsersComponent implements OnInit {
       },
       panelClass: 'custom-dialog-container'
     });
-  
+
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.deleteUser(email);
@@ -58,29 +71,34 @@ export class UsersComponent implements OnInit {
       }
     });
   }
-  
-  
-
-  createUser(user: any) {
-    this.usersService.createUser(user).subscribe({
-      next: (data) => {
-        this.getUsers();
-      },
-      error: (error) => {
-        console.log(error);
-      }
-    });
-  }
 
   updateUser(email: string, user: any) {
-    this.usersService.updateUser(email, user).subscribe({
-      next: (data) => {
+    this.usersService.updateUser(email, user).subscribe(
+      (data) => {
         this.getUsers();
       },
-      error: (error) => {
+      (error) => {
         console.log(error);
+      }
+    );
+  }
+
+  createNewUser() {
+    const dialogRef = this.dialog.open(CreateUserComponent, {
+     
+    });
+  
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result && result.name && result.email) {
+        const newUser = {
+          name: result.name,
+          email: result.email
+        };
+  
+        this.createUser(newUser);
       }
     });
   }
-
+  
+  
 }

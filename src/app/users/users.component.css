@@ -1,57 +1,130 @@
-.custom-table {
-  width: 100%;
-  border-collapse: collapse;
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  width: 200px;
   border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
 }
 
-th, td {
+.user-card {
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  word-wrap: break-word; /* Adicionado para quebrar o texto longo */
+}
+
+.user-data p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  background-image: url('/src/assets/');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-data {
+  margin-top: 16px;
+}
+
+.user-actions {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.delete-button,
+.update-button,
+.details-button {
+  min-width: 200px;
+  flex-grow: 1; /* Faz os botões ocuparem todo o espaço disponível */
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-td, th:last-child {
-  border-right: 1px solid #ddd;
+  border-radius: 8px;
+  height: 40px; /* Ajusta a altura dos botões conforme necessário */
 }
 
 
-button {
-
-  margin-right: 8px;
+.delete-button i,
+.update-button i,
+.details-button i {
+  margin-right: 8px; /* Adicionado */
 }
+
 
 .delete-button {
   background-color: red;
   color: white;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 10px;
-  width: 88px;
 }
 
 .update-button {
   background-color: green;
   color: white;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 10px;
-  width: 88px;
 }
 
 .details-button {
   background-color: rgb(0, 32, 128);
   color: white;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 10px;
-  width: 88px;
 }
 
-.column-lightgray {
+.user-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
   background-color: #f2f2f2;
+  background-image: url('/assets/icons/empty-user.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.row-lightgray {
-  background-color: #f2f2f2;
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
+.user-avatar[src=""] {
+  display: none;
+}
+
+.user-avatar[src=""]:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.default-avatar {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  border-radius: 50%;
+}

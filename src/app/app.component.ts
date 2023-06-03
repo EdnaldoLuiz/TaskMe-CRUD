@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'meu-projeto-angular';
+  constructor(private dialog: MatDialog) {}
+
+  createNewUser() {
+    const dialogRef = this.dialog.open(CreateUserComponent, {
+      width: '500px', // Defina a largura do diálogo de acordo com as suas necessidades
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        // Lidar com quaisquer ações necessárias após a criação de um novo usuário
+      }
+    });
+  }
 }
