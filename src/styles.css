@@ -22,4 +22,9 @@
     width: 20px;
   }
 
+  body {
+    background-image: url(assets/icons/main-bg.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;
+
+  }
+
   

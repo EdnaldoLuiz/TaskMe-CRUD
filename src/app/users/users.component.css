@@ -5,19 +5,13 @@
 
 .user-card {
   width: 200px;
-  border: 1px solid #ddd;
+  border: 2px solid #b3a1a1;
   border-radius: 8px;
   padding: 16px;
   margin: 8px;
-}
-
-.user-card {
-  width: 200px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 8px;
-  word-wrap: break-word; /* Adicionado para quebrar o texto longo */
+  word-wrap: break-word;
+  background-color: #ece4e4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .user-data p {
@@ -46,6 +40,18 @@
   margin-top: 16px;
 }
 
+.user-data label {
+  display: block;
+  font-weight: bold;
+}
+
+.user-data p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .user-actions {
   margin-top: 16px;
   display: flex;
@@ -57,21 +63,20 @@
 .update-button,
 .details-button {
   min-width: 200px;
-  flex-grow: 1; /* Faz os botões ocuparem todo o espaço disponível */
+  flex-grow: 1;
   margin-top: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px;
   border-radius: 8px;
-  height: 40px; /* Ajusta a altura dos botões conforme necessário */
+  height: 40px;
 }
-
 
 .delete-button i,
 .update-button i,
 .details-button i {
-  margin-right: 8px; /* Adicionado */
+  margin-right: 8px;
 }
 
 

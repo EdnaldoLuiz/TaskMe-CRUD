@@ -1,19 +1,60 @@
 .example-spacer {
-    flex: 1 1 auto;
-  }
+  flex: 1 1 auto;
+}
 
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 18%;
-    height: 100vh;
-    background-color: #f2f2f2;
-    padding: 16px;
-  }
-  
-  .content {
-    margin-left: 22%;
-    padding: 16px;
-  }
-  
+.a {
+  background-image: url(model/taskme.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100vh;
+  background-color: rgb(95, 123, 160);
+}
+
+.sidebar .sidebar-logo {
+  margin-bottom: 16px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  margin-top: 30px;
+  padding-left: 20px;
+}
+
+.sidebar-menu li {
+  padding: 8px 0;
+  margin: 0;
+  position: relative;
+}
+
+.sidebar-menu li a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.content {
+  margin-left: 22%;
+  padding: 16px;
+}

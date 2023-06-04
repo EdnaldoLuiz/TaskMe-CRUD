@@ -1,13 +1,22 @@
 <div class="sidebar">
+  <div class="a"></div>
   <ul class="sidebar-menu">
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
-    <li><a href="#">Link 3</a></li>
+    <li>
+      <a href="#" class="text-white">
+        <i class="fas fa-user text-white"></i> Usuários
+      </a>
+    </li>
+    <li>
+      <a href="#" class="text-white">
+        <i class="fas fa-cogs text-white"></i> Geral
+      </a>
+    </li>
   </ul>
 </div>
 
+
 <div class="content">
-  <mat-toolbar [style.color]="'primary'">
+  <mat-toolbar>
     <span>Usuários</span>
     <span class="example-spacer"></span>
     <button mat-raised-button (click)="createNewUser()"><i class="fas fa-user-plus"></i>Adicionar</button>

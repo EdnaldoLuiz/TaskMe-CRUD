@@ -1,33 +1,39 @@
 <div class="user-cards">
   <div *ngFor="let user of users" class="user-card">
-    <div class="user-photo">
-      <img *ngIf="user.photo" [src]="user.photo" alt="Foto do Usuário" class="user-avatar">
-      <div *ngIf="!user.photo" class="default-avatar"></div>
+    <div class="user-photo-section">
+      <div class="user-photo">
+        <img *ngIf="user.photo" [src]="user.photo" alt="Foto do Usuário" class="user-avatar">
+        <div *ngIf="!user.photo" class="default-avatar"></div>
+      </div>
     </div>
     <div class="user-data">
-      <p><strong>Nome:</strong> {{ user.name }}</p>
-      <p><strong>Email:</strong> {{ user.email }}</p>
-      <p><strong>Data de Criação:</strong> {{ user.data_criacao }}</p>
+      <label for="name"><strong>Nome:</strong></label>
+      <p id="name">{{ user.name }}</p>
+      <label for="email"><strong>Email:</strong></label>
+      <p id="email">{{ user.email }}</p>
+      <label for="creation-date"><strong>Data de Criação:</strong></label>
+      <p id="creation-date">{{ user.data_criacao }}</p>
     </div>
-    <div class="user-actions">
-      <div class="action-item">
-        <button class="delete-button" (click)="exibirPopupExclusao(user.email)">
-          <i class="fas fa-trash-alt"></i>
-          <p>Apagar</p>
-        </button>
-      </div>
-      <div class="action-item">
-        <button class="update-button" (click)="updateUser(user.email, { name: 'Novo Nome', email: 'novoemail@example.com' })">
-          <i class="fas fa-pencil-alt"></i>
-          <p>Atualizar</p>
-        </button>
-      </div>
-      <div class="action-item">
-        <button class="details-button" (click)="updateUser(user.email, { name: 'Novo Nome', email: 'novoemail@example.com' })">
-          <i class="fas fa-eye"></i>
-          <p>Visualizar</p>
-        </button>
+      <div class="user-actions">
+        <div class="action-item">
+          <button class="delete-button" (click)="exibirPopupExclusao(user.email)">
+            <i class="fas fa-trash-alt"></i>
+            <p>Apagar</p>
+          </button>
+        </div>
+        <div class="action-item">
+          <button class="update-button" (click)="updateUser(user.email, { name: user.name, email: user.email })">
+            <i class="fas fa-pencil-alt"></i>
+            <p>Atualizar</p>
+          </button>
+        </div>
+        <div class="action-item">
+          <button class="details-button" (click)="updateUser(user.email, { name: 'Novo Nome', email: 'novoemail@example.com' })">
+            <i class="fas fa-eye"></i>
+            <p>Visualizar</p>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
