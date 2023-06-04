@@ -12,12 +12,12 @@ export class AppComponent {
 
   createNewUser() {
     const dialogRef = this.dialog.open(CreateUserComponent, {
-      width: '500px', // Defina a largura do diálogo de acordo com as suas necessidades
+      width: 'fit-content', 
     });
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        // Lidar com quaisquer ações necessárias após a criação de um novo usuário
+      
       }
     });
   }

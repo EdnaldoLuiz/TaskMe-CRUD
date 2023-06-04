@@ -1,0 +1,53 @@
+.custom-dialog-content {
+  text-align: center;
+}
+
+.dialog-title {
+  margin-bottom: 20px;
+}
+
+.dialog-content {
+  margin-bottom: 30px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  margin-right: 10px;
+  width: 70px;
+}
+
+.cancel-button {
+  background-color: green;
+  color: white;
+  width: 70px;
+}
+
+.custom-dialog-content {
+  background-color: #f3efef;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.custom-dialog-content {
+  background-color: #f3efef;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mat-dialog-container {
+  z-index: 9999 !important;
+}
+
+.delete-icon {
+  width: 20px;
+}

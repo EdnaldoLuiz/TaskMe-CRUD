@@ -1,0 +1,17 @@
+<div class="update-form-container">
+  <h4 mat-dialog-title>Atualizar Usuário</h4>
+  <div mat-dialog-content>
+    <div class="form-group">
+      <label for="newName">Novo Nome:</label>
+      <input type="text" id="newName" [(ngModel)]="newName" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="newEmail">Novo Email:</label>
+      <input type="email" id="newEmail" [(ngModel)]="newEmail" class="form-control">
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onUpdateClick()">Atualizar</button>
+    <button mat-button (click)="onCancelClick()">Cancelar</button>
+  </div>
+</div>

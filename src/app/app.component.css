@@ -16,7 +16,7 @@
   left: 0;
   width: 20%;
   height: 100vh;
-  background-color: rgb(95, 123, 160);
+  background-color: rgb(25, 32, 41);
 }
 
 .sidebar .sidebar-logo {
@@ -57,4 +57,18 @@
 .content {
   margin-left: 22%;
   padding: 16px;
+}
+
+.add-button {
+  background-color: #104cce !important; 
+  color: white !important;
+}
+
+.add-button:hover {
+  background-color: #1976d2;
+}
+
+.add-button i {
+  color: white;
+  margin-right: 8px;
 }

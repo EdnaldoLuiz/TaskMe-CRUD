@@ -1,0 +1,6 @@
+<div class="action-item">
+          <button class="details-button" (click)="updateUser(user.email, { name: 'Novo Nome', email: 'novoemail@example.com' })">
+            <i class="fas fa-eye"></i>
+            <p>Visualizar</p>
+          </button>
+        </div>

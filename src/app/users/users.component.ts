@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../service/users.service';
 import { MatDialog } from '@angular/material/dialog';
-import { ExclusaoComponente } from '../service/users.popup.delete';
+import { ExclusaoComponente } from '../exclusao/exclusao.component';
 import { CreateUserComponent } from '../create-user/create-user.component';
+import { UpdateFormComponent } from '../update-form/update-form.component';
+
 
 @Component({
   selector: 'app-users',
@@ -66,21 +68,34 @@ export class UsersComponent implements OnInit {
         this.deleteUser(email);
         document.body.style.overflow = 'hidden';
         setTimeout(() => {
-          location.reload(); // Recarrega a página após 3 segundos (3000 milissegundos)
+          location.reload();
         }, 300);
       }
     });
   }
 
   updateUser(email: string, user: any) {
-    this.usersService.updateUser(email, user).subscribe(
-      (data) => {
-        this.getUsers();
-      },
-      (error) => {
-        console.log(error);
+    const dialogRef = this.dialog.open(UpdateFormComponent, {
+      data: { user: user }
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result && result.newName && result.newEmail) {
+        const updatedUser = {
+          name: result.newName,
+          email: result.newEmail
+        };
+
+        this.usersService.updateUser(email, updatedUser).subscribe(
+          (data) => {
+            this.getUsers();
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
       }
-    );
+    });
   }
 
   createNewUser() {

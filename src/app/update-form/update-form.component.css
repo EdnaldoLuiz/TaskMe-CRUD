@@ -1,0 +1,85 @@
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.user-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action-item {
+  margin-right: 10px;
+}
+
+.delete-button,
+.update-button {
+  display: flex;
+  align-items: center;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-button i,
+.update-button i {
+  margin-right: 5px;
+}
+
+.delete-button p,
+.update-button p {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.mat-dialog-content {
+  margin-top: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 5px;
+}
+
+.mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.custom-dialog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-form-container {
+  padding: 20px;
+  width: fit-content;
+  background-color: aqua;
+  border-radius: 4px;
+}

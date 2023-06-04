@@ -14,12 +14,13 @@
   </ul>
 </div>
 
-
 <div class="content">
   <mat-toolbar>
-    <span>Usuários</span>
     <span class="example-spacer"></span>
-    <button mat-raised-button (click)="createNewUser()"><i class="fas fa-user-plus"></i>Adicionar</button>
+    <button mat-raised-button class="add-button" (click)="createNewUser()">
+  <i class="fas fa-user-plus"></i>Adicionar
+</button>
+
   </mat-toolbar>
 
   <router-outlet></router-outlet>
