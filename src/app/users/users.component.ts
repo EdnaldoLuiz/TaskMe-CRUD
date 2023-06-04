@@ -5,7 +5,6 @@ import { ExclusaoComponente } from '../exclusao/exclusao.component';
 import { CreateUserComponent } from '../create-user/create-user.component';
 import { UpdateFormComponent } from '../update-form/update-form.component';
 
-
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -44,8 +43,8 @@ export class UsersComponent implements OnInit {
     );
   }
 
-  deleteUser(email: string) {
-    this.usersService.deleteUser(email).subscribe(
+  deleteUser(id: string) {
+    this.usersService.deleteUser(id).subscribe(
       (data) => {
         this.getUsers();
       },
@@ -55,7 +54,7 @@ export class UsersComponent implements OnInit {
     );
   }
 
-  exibirPopupExclusao(email: string) {
+  exibirPopupExclusao(id: string) {
     const dialogRef = this.dialog.open(ExclusaoComponente, {
       data: {
         mensagem: 'Deseja excluir o usuário?'
@@ -65,7 +64,7 @@ export class UsersComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.deleteUser(email);
+        this.deleteUser(id);
         document.body.style.overflow = 'hidden';
         setTimeout(() => {
           location.reload();
@@ -74,7 +73,7 @@ export class UsersComponent implements OnInit {
     });
   }
 
-  updateUser(email: string, user: any) {
+  updateUser(id: string, user: any) {
     const dialogRef = this.dialog.open(UpdateFormComponent, {
       data: { user: user }
     });
@@ -86,7 +85,7 @@ export class UsersComponent implements OnInit {
           email: result.newEmail
         };
 
-        this.usersService.updateUser(email, updatedUser).subscribe(
+        this.usersService.updateUser(id, updatedUser).subscribe(
           (data) => {
             this.getUsers();
           },
@@ -100,20 +99,18 @@ export class UsersComponent implements OnInit {
 
   createNewUser() {
     const dialogRef = this.dialog.open(CreateUserComponent, {
-     
+
     });
-  
+
     dialogRef.afterClosed().subscribe((result) => {
       if (result && result.name && result.email) {
         const newUser = {
           name: result.name,
           email: result.email
         };
-  
+
         this.createUser(newUser);
       }
     });
   }
-  
-  
 }

@@ -1,13 +1,13 @@
 import { DatePipe } from '@angular/common';
 
 export class Users {
-  id: number;
+  id: string;
   name: string;
   email: string;
   birthDate: string;
   formattedBirthDate: string;
   
-  constructor(id: number, name: string, email: string, birthDate: string) {
+  constructor(id: string, name: string, email: string, birthDate: string) {
     this.id = id;
     this.name = name;
     this.email = email;

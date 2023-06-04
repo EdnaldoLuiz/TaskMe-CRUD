@@ -23,7 +23,6 @@ import { UpdateFormComponent } from './update-form/update-form.component';
     ExclusaoComponente,
     CreateUserComponent,
     UpdateFormComponent,
-     // Adicione o componente ExclusaoComponente aqui
   ],
   imports: [
     BrowserModule,

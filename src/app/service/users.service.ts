@@ -18,13 +18,13 @@ export class UsersService {
     return this.http.post<any>(this.baseUrl, newUser);
   }
 
-  updateUser(email: string, user: any): Observable<any> {
-    const url = `${this.baseUrl}/${encodeURIComponent(email)}`;
+  updateUser(id: string, user: any): Observable<any> {
+    const url = `${this.baseUrl}/${encodeURIComponent(id)}`;
     return this.http.put<any>(url, user);
   }
 
-  deleteUser(email: string): Observable<any> {
-    const url = `${this.baseUrl}/${encodeURIComponent(email)}`;
+  deleteUser(id: string): Observable<any> {
+    const url = `${this.baseUrl}/${encodeURIComponent(id)}`;
     return this.http.delete<any>(url);
   }
 }
