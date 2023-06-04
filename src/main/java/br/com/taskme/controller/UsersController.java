@@ -21,14 +21,14 @@ public class UsersController {
   }
 
   @PostMapping(value = "/users")
-  public Users enviarLinguagem(@RequestBody Users users) {
-    Users savedUsers = repository.save(users);
-    return savedUsers;
+  public Users createUser(@RequestBody Users user) {
+    Users savedUser = repository.save(user);
+    return savedUser;
   }
 
-  @PutMapping(value = "/users/{email}")
-  public Users updateUserByEmail(@PathVariable("email") String email, @RequestBody Users updatedUser) {
-    Users existingUser = repository.findByEmail(email);
+  @PutMapping(value = "/users/{id}")
+  public Users updateUserById(@PathVariable("id") String id, @RequestBody Users updatedUser) {
+    Users existingUser = repository.findById(id).orElse(null);
 
     if (existingUser != null) {
       existingUser.setName(updatedUser.getName());
@@ -39,9 +39,9 @@ public class UsersController {
     return existingUser;
   }
 
-  @DeleteMapping(value = "/users/{email}")
-  public String deleteUser(@PathVariable("email") String email) {
-    Users user = repository.findByEmail(email);
+  @DeleteMapping(value = "/users/{id}")
+  public String deleteUserById(@PathVariable("id") String id) {
+    Users user = repository.findById(id).orElse(null);
     if (user != null) {
       repository.delete(user);
       return "Deletado com Sucesso!";
@@ -54,6 +54,4 @@ public class UsersController {
   public String test() {
     return "Hi";
   }
-
-
 }
