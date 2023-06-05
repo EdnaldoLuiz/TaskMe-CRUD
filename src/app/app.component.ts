@@ -12,7 +12,7 @@ export class AppComponent {
 
   createNewUser() {
     const dialogRef = this.dialog.open(CreateUserComponent, {
-      width: 'fit-content', 
+      width: 'fit-content'
     });
 
     dialogRef.afterClosed().subscribe((result) => {

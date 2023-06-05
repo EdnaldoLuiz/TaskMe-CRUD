@@ -16,7 +16,6 @@ export class CreateUserComponent {
   ) {}
 
   createUser() {
-    console.log(this.newUser);
     this.usersService.createUser(this.newUser).subscribe(() => {
       this.dialogRef.close(this.newUser);
     });

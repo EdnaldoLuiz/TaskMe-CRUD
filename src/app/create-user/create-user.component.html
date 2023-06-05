@@ -1,17 +1,20 @@
 <div class="container">
   <form (submit)="createUser()">
+    <h2>Novo usuário</h2>
+
     <div>
-      <label for="name">Nome:</label>
-      <input type="text" id="name" [(ngModel)]="newUser.name" required>
+      <label for="name" class="sr-only">Nome:</label>
+      <input placeholder="Digite seu nome aqui" type="text" id="name" [(ngModel)]="newUser.name" required>
     </div>
 
     <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" [(ngModel)]="newUser.email" required>
+      <label for="email" class="sr-only">Email:</label>
+      <input placeholder="Digite seu email aqui" type="email" id="email" [(ngModel)]="newUser.email" required>
     </div>
 
     <div class="button-container">
       <button type="submit">Criar</button>
+      
       <button type="button" (click)="cancel()">Cancelar</button>
     </div>
   </form>

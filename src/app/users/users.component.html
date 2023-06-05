@@ -7,12 +7,9 @@
       </div>
     </div>
     <div class="user-data">
-      <label for="name"><strong>Nome:</strong></label>
-      <p id="name">{{ user.name }}</p>
-      <label for="email"><strong>Email:</strong></label>
-      <p id="email">{{ user.email }}</p>
-      <label for="creation-date"><strong>Data de Criação:</strong></label>
-      <p id="creation-date">{{ user.data_criacao }}</p>
+      <p id="name"><strong>Nome:</strong> {{ user.name }}</p>
+      <p id="email"><strong>E-mail:</strong> {{ user.email }}</p>
+      <p id="creation-date"><strong>Data de Criação:</strong> {{ user.data_criacao }}</p>
     </div>
       <div class="user-actions">
         <div class="action-item">
@@ -26,9 +23,7 @@
             <i class="fas fa-pencil-alt"></i>
             <p>Atualizar</p>
           </button>
-
         </div>
-        
       </div>
     </div>
   </div>
