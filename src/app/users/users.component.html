@@ -16,13 +16,13 @@
     </div>
       <div class="user-actions">
         <div class="action-item">
-          <button class="delete-button" (click)="exibirPopupExclusao(user.email)">
+          <button class="delete-button" (click)="exibirPopupExclusao(user.id)">
             <i class="fas fa-trash-alt"></i>
             <p>Apagar</p>
           </button>
         </div>
         <div class="action-item">
-          <button class="update-button" (click)="updateUser(user.email, user)">
+          <button class="update-button" (click)="updateUser(user.id, user)">
             <i class="fas fa-pencil-alt"></i>
             <p>Atualizar</p>
           </button>

@@ -16,13 +16,13 @@ export class CreateUserComponent {
   ) {}
 
   createUser() {
-    console.log(this.newUser); // Adicionado para verificar os dados do novo usuário no console
+    console.log(this.newUser);
     this.usersService.createUser(this.newUser).subscribe(() => {
-      this.dialogRef.close(this.newUser); // Fecha o diálogo e passa o novo usuário como resultado
+      this.dialogRef.close(this.newUser);
     });
   }
 
   cancel() {
-    this.dialogRef.close(false); // Fecha o diálogo e passa false como resultado
+    this.dialogRef.close(false);
   }
 }
