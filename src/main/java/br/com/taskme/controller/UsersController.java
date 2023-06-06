@@ -49,9 +49,4 @@ public class UsersController {
       return "Usuário não encontrado.";
     }
   }
-
-  @GetMapping(value = "/")
-  public String test() {
-    return "Hi";
-  }
 }
