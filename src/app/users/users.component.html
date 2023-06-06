@@ -11,20 +11,19 @@
       <p id="email"><strong>E-mail:</strong> {{ user.email }}</p>
       <p id="creation-date"><strong>Data de Criação:</strong> {{ user.data_criacao }}</p>
     </div>
-      <div class="user-actions">
-        <div class="action-item">
-          <button class="delete-button" (click)="exibirPopupExclusao(user.id)">
-            <i class="fas fa-trash-alt"></i>
-            <p>Apagar</p>
-          </button>
-        </div>
-        <div class="action-item">
-          <button class="update-button" (click)="updateUser(user.id, user)">
-            <i class="fas fa-pencil-alt"></i>
-            <p>Atualizar</p>
-          </button>
-        </div>
+    <div class="user-actions">
+      <div class="action-item">
+        <button class="delete-button" (click)="exibirPopupExclusao(user.id)">
+          <i class="fas fa-trash-alt"></i>
+          <p>Apagar</p>
+        </button>
+      </div>
+      <div class="action-item">
+        <button class="update-button" (click)="updateUser(user.id, user)">
+          <i class="fas fa-pencil-alt"></i>
+          <p>Atualizar</p>
+        </button>
       </div>
     </div>
   </div>
-
+</div>

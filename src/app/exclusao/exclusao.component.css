@@ -32,6 +32,7 @@
   transform: translate(-50%, -50%);
   z-index: 9999;
 }
+
 .dialog-message {
   margin-bottom: 20px;
   font-size: 16px;
@@ -51,11 +52,15 @@
   background-color: red;
   color: white;
   margin-right: 10px;
-  width: 70px;
+  padding: 5px;
+  border-radius: 4px;
+  width: 90px;
 }
 
 .cancel-button {
   background-color: green;
   color: white;
-  width: 70px;
+  padding: 5px;
+  border-radius: 4px;
+  width: 90px;
 }
