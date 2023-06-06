@@ -8,7 +8,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog) { }
 
   createNewUser() {
     const dialogRef = this.dialog.open(CreateUserComponent, {
@@ -17,7 +17,9 @@ export class AppComponent {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-      
+        setTimeout(() => {
+          location.reload();
+        }, 300);
       }
     });
   }
