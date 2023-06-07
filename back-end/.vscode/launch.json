@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-TaskmeApplication<taskme>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.taskme.TaskmeApplication",
+            "projectName": "taskme",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
