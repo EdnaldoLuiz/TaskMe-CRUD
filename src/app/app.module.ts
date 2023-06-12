@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { ExclusaoComponente } from './exclusao/exclusao.component';
 import { UpdateFormComponent } from './update-form/update-form.component';
 import { AnalyticComponent } from './analytic/analytic.component';
+import { HeaderComponent } from './header/header.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 
@@ -25,6 +27,8 @@ import { AnalyticComponent } from './analytic/analytic.component';
     CreateUserComponent,
     UpdateFormComponent,
     AnalyticComponent,
+    HeaderComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,

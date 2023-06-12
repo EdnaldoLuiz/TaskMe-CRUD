@@ -10,6 +10,7 @@
   --primary-color: #34394F;
   --secundary-color: #575b74;
   --tertiary-color: #6D7081;
+  --header-color: #737894;
   --shadow: 0 0.125rem 0.313rem 0 rgba(0, 0, 0, 0.2);
   font-size: 62.5%;
 }

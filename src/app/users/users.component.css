@@ -3,6 +3,7 @@
   grid-template-columns: repeat(3, 1fr);
   overflow-x: scroll;
   gap: 1.6rem;
+  margin-top: 50px;
 }
 
 .user-card {
@@ -20,6 +21,7 @@
 
 .user-data p {
   margin: 0;
+
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

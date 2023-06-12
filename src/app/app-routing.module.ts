@@ -6,7 +6,7 @@ import { AnalyticComponent } from './analytic/analytic.component';
 const routes: Routes = [
   { path: '', redirectTo: '/users', pathMatch: 'full' },
   { path: 'users', component: UsersComponent },
-  { path: 'analytic', component: AnalyticComponent }, // Adicione esta linha para a rota do AnalyticComponent
+  { path: 'analytic', component: AnalyticComponent },
 ];
 
 @NgModule({
