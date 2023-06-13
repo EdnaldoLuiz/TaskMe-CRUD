@@ -1,0 +1,41 @@
+import { Component, ViewChild, Input } from "@angular/core";
+import { ChartComponent } from "ng-apexcharts";
+import { ChartOptions } from "./chart.options";
+import { ApexNonAxisChartSeries, ApexChart, ApexResponsive } from "ng-apexcharts";
+
+@Component({
+  selector: "app-main-dashboard",
+  templateUrl: "./main-dashboard.component.html",
+  styleUrls: ["./main-dashboard.component.css"],
+})
+export class MainDashboardComponent {
+  @ViewChild("chart") chart!: ChartComponent;
+  @Input() chartOptions: Partial<ChartOptions>;
+
+  constructor() {
+    this.chartOptions = {
+      series: [
+        {
+          data: [44, 55, 13, 43, 22],
+        },
+      ] as unknown as ApexNonAxisChartSeries,
+      chart: {
+        type: "donut",
+      },
+      labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      ] as unknown as ApexResponsive[],
+    };
+  }
+}

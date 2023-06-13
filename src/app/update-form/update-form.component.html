@@ -1,0 +1,23 @@
+<div class="custom-dialog-container">
+  <div class="update-form-container">
+    <h4>Atualizar Usuário</h4>
+    <div class="form-group">
+      <label for="newName">Novo Nome:</label>
+      <input type="text" id="newName" [(ngModel)]="newName" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="newEmail">Novo Email:</label>
+      <input type="email" id="newEmail" [(ngModel)]="newEmail" class="form-control">
+    </div>
+    <div class="user-actions">
+      <button class="update-button" (click)="onUpdateClick()">
+        <i class="fa fa-check"></i>
+        <p>Atualizar</p>
+      </button>
+      <button class="cancel-button" (click)="onCancelClick()">
+        <i class="fa fa-times"></i>
+        <p>Cancelar</p>
+      </button>
+    </div>
+  </div>
+</div>

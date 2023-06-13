@@ -1,0 +1,137 @@
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow-x: scroll;
+  gap: 1.6rem;
+  margin-top: 50px;
+}
+
+.user-card {
+  border-radius: .8rem;
+  padding: 1.6rem;
+  margin: .8rem;
+  word-wrap: break-word;
+  background-color: var(--secundary-color);
+  box-shadow: var(--shadow);
+}
+
+.user-data * {
+  color: #FFF;
+}
+
+.user-data p {
+  margin: 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 2.4rem;
+}
+
+.user-data p strong {
+  margin-right: .4rem;
+}
+
+.user-photo-section {
+  margin-bottom: 2.4rem;
+}
+
+.user-photo {
+  width: 10.0rem;
+  height: 10.0rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  background-image: url('/src/assets/');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-actions {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.delete-button,
+.update-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  gap: .8rem;
+  padding: .8rem 1.6rem;
+  border-radius: .8rem;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+}
+
+:is(.delete-button:hover, .update-button:hover) {
+  opacity: .87;
+  cursor: pointer;
+}
+
+.delete-button i,
+.update-button i,
+.details-button i {
+  margin-right: .8rem;
+}
+
+.delete-button {
+  background-color: #FF6A55;
+  color: white;
+}
+
+.update-button {
+  background-color: #2BD23C;
+  color: white;
+}
+
+.details-button {
+  background-color: rgb(0, 32, 128);
+  color: white;
+}
+
+.user-photo {
+  width: 10.0rem;
+  height: 10.0rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  background-image: url('/assets/icons/empty-user.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-avatar {
+  width: 8.0rem;
+  height: 8.0rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-avatar[src=""] {
+  display: none;
+}
+
+.user-avatar[src=""]:after {
+  content: "";
+  width: 8.0rem;
+  height: 8.0rem;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.default-avatar {
+  width: 8.0rem;
+  height: 8.0rem;
+  background-size: cover;
+  border-radius: 50%;
+}

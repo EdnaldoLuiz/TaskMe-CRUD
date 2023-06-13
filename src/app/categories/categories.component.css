@@ -1,0 +1,63 @@
+.widget-container {
+  margin-top: 70px;
+  margin-right: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.widget {
+  background-color: #fff;
+  color: #fff;
+  border-radius: 5px;
+  border: 2px solid rgb(209, 194, 194);
+  box-shadow: 5px 5px 5px #272222;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.widget.green {
+  background-color: rgb(4, 67, 66);
+}
+
+.widget.yellow {
+  background-color: rgb(163, 108, 18);
+}
+
+.widget.red {
+  background-color: rgb(126, 5, 5);
+}
+
+.widget.blue {
+  background-color: rgb(105, 32, 251);
+}
+
+.widget .icon {
+  width: 100px;
+  font-size: 60px;
+  text-align: center;
+}
+
+.widget .value {
+  text-align: center;
+  width: 175px;
+}
+
+.widget .value .top {
+  font-size: 30px;
+}
+
+.widget .value .bottom {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.icon-right {
+  display: flex;
+  align-items: center;
+}
+
+.icon-right i {
+  margin-left: 5px;
+}
