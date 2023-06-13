@@ -9,6 +9,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class UpdateFormComponent {
   newName: string = '';
   newEmail: string = '';
+  showForm: boolean = false;
 
   constructor(
     public dialogRef: MatDialogRef<UpdateFormComponent>,
@@ -16,6 +17,10 @@ export class UpdateFormComponent {
   ) {
     this.newName = data.user.name;
     this.newEmail = data.user.email;
+
+    setTimeout(() => {
+      this.showForm = true;
+    }, 500);
   }
 
   onUpdateClick(): void {
@@ -29,5 +34,7 @@ export class UpdateFormComponent {
   onCancelClick(): void {
     this.dialogRef.close();
   }
+
+  
   
 }

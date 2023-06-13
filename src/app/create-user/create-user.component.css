@@ -17,13 +17,6 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-form h2 {
-  font-size: 2.4rem;
-  color: #FFF;
-  text-align: start;
-  margin-bottom: .8rem;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -43,39 +36,45 @@ form {
   opacity: 1;
 }
 
+form h2 {
+  font-size: 2.4rem;
+  color: #FFF;
+  text-align: start;
+  margin-bottom: 0.8rem;
+}
+
 input[type="text"],
 input[type="email"] {
   font-family: 'Poppins', sans-serif;
   border: none;
   color: var(--primary-color);
-  border-radius: .4rem;
-  padding: .8rem;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
   width: 100%;
   font-size: 1.4rem;
 }
 
 input:focus {
-  outline: .2rem solid #2A85FF;
+  outline: 0.2rem solid #2A85FF;
 }
 
 .button-container {
   display: flex;
-  gap: .8rem;
+  gap: 0.8rem;
   margin-top: 1.6rem;
 }
 
 button {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  padding: .8rem 1.6rem;
-  border-radius: .4rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
   cursor: pointer;
   min-width: 10.0rem;
 }
 
 button:hover {
-  cursor: pointer;
-  opacity: .87;
+  opacity: 0.87;
 }
 
 button[type="submit"] {

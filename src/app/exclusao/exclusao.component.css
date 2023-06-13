@@ -11,8 +11,13 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Added overlay background color */
   z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.custom-dialog-container.show-form {
+  opacity: 1;
 }
 
 .custom-dialog-content {
