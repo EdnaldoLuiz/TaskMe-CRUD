@@ -52,3 +52,12 @@
   font-size: 20px;
   margin-top: 10px;
 }
+
+.icon-right {
+  display: flex;
+  align-items: center;
+}
+
+.icon-right i {
+  margin-left: 5px;
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChartOptions } from "../main-dashboard/chart.options";
 
 @Component({
   selector: 'app-analytic',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./analytic.component.css']
 })
 export class AnalyticComponent {
+  chartOptions: Partial<ChartOptions> = {};
+
 
 }

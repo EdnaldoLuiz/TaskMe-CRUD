@@ -51,3 +51,5 @@ a {
 ::-webkit-scrollbar-thumb {
   background-color: var(--tertiary-color);
 }
+
+@import '~@fortawesome/fontawesome-free/css/all.min.css';

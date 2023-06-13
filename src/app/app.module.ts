@@ -16,6 +16,8 @@ import { UpdateFormComponent } from './update-form/update-form.component';
 import { AnalyticComponent } from './analytic/analytic.component';
 import { HeaderComponent } from './header/header.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
+import { NgApexchartsModule } from "ng-apexcharts";
 
 
 
@@ -29,6 +31,7 @@ import { CategoriesComponent } from './categories/categories.component';
     AnalyticComponent,
     HeaderComponent,
     CategoriesComponent,
+    MainDashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { CategoriesComponent } from './categories/categories.component';
     MatButtonModule,
     HttpClientModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    NgApexchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

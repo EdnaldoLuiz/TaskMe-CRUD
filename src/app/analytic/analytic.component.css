@@ -1,0 +1,9 @@
+.chart {
+  width: 500px;
+  margin-top: 40px;
+  padding: 0;
+  background-color: var(--secundary-color);
+  border-radius: 5px;
+  border: 2px solid rgb(209, 194, 194);
+  box-shadow: 5px 5px 5px #272222;
+}
