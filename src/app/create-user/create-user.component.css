@@ -8,8 +8,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   z-index: 9999;
+  transition: background-color 0.5s ease;
+}
+
+.container.show-form {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 form h2 {
@@ -30,6 +35,12 @@ form {
   max-width: 50.0rem;
   width: 100%;
   background-color: var(--primary-color);
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.container.show-form form {
+  opacity: 1;
 }
 
 input[type="text"],
@@ -42,7 +53,8 @@ input[type="email"] {
   width: 100%;
   font-size: 1.4rem;
 }
-input:is(:focus) {
+
+input:focus {
   outline: .2rem solid #2A85FF;
 }
 
@@ -60,7 +72,8 @@ button {
   cursor: pointer;
   min-width: 10.0rem;
 }
-button:is(:hover) {
+
+button:hover {
   cursor: pointer;
   opacity: .87;
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{'show-form': showForm}">
   <form (submit)="createUser()">
     <h2>Novo usuário</h2>
 
@@ -14,7 +14,7 @@
 
     <div class="button-container">
       <button type="submit">Criar</button>
-      
+
       <button type="button" (click)="cancel()">Cancelar</button>
     </div>
   </form>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { UsersService } from '../service/users.service';
 
@@ -7,13 +7,18 @@ import { UsersService } from '../service/users.service';
   templateUrl: './create-user.component.html',
   styleUrls: ['./create-user.component.css']
 })
-export class CreateUserComponent {
+export class CreateUserComponent implements OnInit {
   newUser: any = {};
+  showForm: boolean = false;
 
   constructor(
     private dialogRef: MatDialogRef<CreateUserComponent>,
     private usersService: UsersService
-  ) {}
+  ) { }
+
+  ngOnInit() {
+    this.showFormAfterDelay();
+  }
 
   createUser() {
     this.usersService.createUser(this.newUser).subscribe(() => {
@@ -23,5 +28,11 @@ export class CreateUserComponent {
 
   cancel() {
     this.dialogRef.close(false);
+  }
+
+  showFormAfterDelay() {
+    setTimeout(() => {
+      this.showForm = true;
+    }, 500);
   }
 }
