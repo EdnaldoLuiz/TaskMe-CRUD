@@ -18,6 +18,7 @@
 }
 
 .custom-dialog-container.show-form {
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;
 }
 
@@ -29,7 +30,6 @@
   border-radius: 1.0rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
   text-align: start;
   position: fixed;
@@ -87,14 +87,14 @@
   min-width: 10.0rem;
   display: flex;
   align-items: center;
-  background-color: green;
+  background-color: #2BD23C;
   color: white;
   border: none;
   margin-right: 0.8rem;
 }
 
 .update-form-container .user-actions .cancel-button {
-  background-color: red;
+  background-color: #FF6A55;
 }
 
 .update-form-container .user-actions .update-button i,
