@@ -12,11 +12,18 @@ export class MainDashboardComponent {
     series: any[],
     chart: ApexChart,
     labels: string[],
-    responsive: ApexResponsive[]
+    responsive: ApexResponsive[],
+    colors: string[],
+    dataLabels: {
+      style: {
+        colors: string[]
+      }
+    }
   } = {
-      series: [44, 55, 13, 43],
+      series: [28.4, 35.5, 8.4, 27.7],
       chart: {
-        type: "donut" as ChartType
+        type: "donut" as ChartType,
+        foreColor: "#ffffff"
       },
       labels: ['Meditação', 'Estudos', 'Entretenimento', 'Esportes'],
       responsive: [
@@ -31,6 +38,12 @@ export class MainDashboardComponent {
             }
           }
         }
-      ]
+      ],
+      colors: ['#ffffff', '#00ff00', '#0000ff', '#ffff00'],
+      dataLabels: {
+        style: {
+          colors: ['#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+        }
+      }
     };
 }

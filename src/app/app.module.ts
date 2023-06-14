@@ -18,6 +18,7 @@ import { HeaderComponent } from './header/header.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
 import { NgApexchartsModule } from "ng-apexcharts";
+import { ChartComponent } from './chart/chart.component';
 
 
 
@@ -32,6 +33,7 @@ import { NgApexchartsModule } from "ng-apexcharts";
     HeaderComponent,
     CategoriesComponent,
     MainDashboardComponent,
+    ChartComponent,
   ],
   imports: [
     BrowserModule,

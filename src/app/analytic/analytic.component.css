@@ -1,3 +1,20 @@
+.main-area {
+  display: flex;
+  gap: 20px;
+  flex-direction: row-reverse;
+  padding: 0 20px;
+}
+
+.dashboard {
+  width: 500px;
+  margin-top: 40px;
+  padding: 0;
+  background-color: var(--secundary-color);
+  border-radius: 5px;
+  border: 2px solid rgb(209, 194, 194);
+  box-shadow: 5px 5px 5px #272222;
+}
+
 .chart {
   width: 500px;
   margin-top: 40px;
@@ -6,4 +23,9 @@
   border-radius: 5px;
   border: 2px solid rgb(209, 194, 194);
   box-shadow: 5px 5px 5px #272222;
+}
+
+.dashboard,
+.chart {
+  flex: 1; 
 }

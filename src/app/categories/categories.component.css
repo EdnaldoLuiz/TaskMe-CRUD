@@ -1,8 +1,21 @@
-.widget-container {
-  margin-top: 70px;
+.main-container {
+  margin-top: 60px;
   margin-right: 8px;
+}
+
+.categories-title {
+  top: 0;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.categories-title h1 {
+  font-size: 3rem;
+  color: #FFF;
+}
+
+.widget-container {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   grid-template-columns: repeat(4, 1fr);
   overflow-y: scroll;
   padding-bottom: 16px;
@@ -36,8 +49,12 @@
   background-color: rgb(105, 32, 251);
 }
 
+.icons {
+  width: 7rem;
+}
+
 .widget .icon {
-  width: 100px;
+  width: 9.0rem;
   font-size: 60px;
   text-align: center;
 }
@@ -52,7 +69,7 @@
 }
 
 .widget .value .bottom {
-  font-size: 20px;
+  font-size: 2.3rem;
   margin-top: 10px;
 }
 
