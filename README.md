@@ -1,5 +1,6 @@
  <h1 align="center">TaskMe-CRUD</h1>
  
+ <h2>Funcionalidades:</h2>
  <table>
     <thead>
         <tr>
@@ -30,7 +31,7 @@
     <tbody>
         <tr>
             <td>/users</td>
-            <td>Parte de gerenciamento de usuários, aonde é possivel criar, atualizar e apagar os dados.</td>
+            <td>Parte de gerenciamento de usuários, aonde é possivel criar, atualizar e apagar os usuários.</td>
             <td align="center">
             <img width="100%" src="https://github.com/EdnaldoLuiz/TaskMe-CRUD/assets/112354693/a08c4798-bfeb-45fd-b57e-0f25c2ede915"/></td>
         </tr>
@@ -44,4 +45,6 @@
 </table>
 
 <h2>Tecnologias utilizadas:</h2>
-<img src="https://github.com/EdnaldoLuiz/TaskMe-CRUD/assets/112354693/0a68a2d7-1b37-4f95-848d-3a5b83f0500f">
+<img src="https://github.com/EdnaldoLuiz/TaskMe-CRUD/assets/112354693/a2707565-1f76-4c06-9575-6daf38c50442">
+
+
