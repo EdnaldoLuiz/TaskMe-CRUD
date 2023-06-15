@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/taskme",
+            "outputPath": "dist/meu-projeto-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "taskme:build:production"
+              "browserTarget": "meu-projeto-angular:build:production"
             },
             "development": {
-              "browserTarget": "taskme:build:development"
+              "browserTarget": "meu-projeto-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
