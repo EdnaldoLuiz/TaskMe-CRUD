@@ -10,9 +10,13 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Document(collection = "db_users")
 public class Users {
 
@@ -28,13 +32,5 @@ public class Users {
 
   @Indexed(unique = true)
   private String email;
-
-  public Users() {}
-
-  public Users(String id, LocalDate data, String name, String email) {
-    this.name = name;
-    this.email = email;
-    this.id = id;
-    this.data_criacao = data;
-  }
+  
 }
