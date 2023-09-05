@@ -1,6 +1,6 @@
  <h1 align="center">TaskMe-CRUD</h1>
  
- <h2>Funcionalidades:</h2>
+ <h2>🛠️ Funcionalidades:</h2>
  <table>
     <thead>
         <tr>
@@ -37,14 +37,17 @@
         </tr>
         <tr>
             <td>/analytics</td>
-            <td>Parte de dashboards, aonde é possivel ver as categorias mais utilizadas e a quantidade de usuários</td>
+            <td>Parte de dashboards, aonde é possivel ver as categorias mais utilizadas e a quantidade de usuários.</td>
             <td align="center">
             <img width="100%" src="https://github.com/EdnaldoLuiz/TaskMe-CRUD/assets/112354693/c7b89ee7-e7da-472b-b7c6-ed9bb2558739" /></a></td>
         </tr>
     </tbody>
 </table>
 
-<h2>Tecnologias utilizadas:</h2>
-<img src="https://github.com/EdnaldoLuiz/TaskMe-CRUD/assets/112354693/a2707565-1f76-4c06-9575-6daf38c50442">
+<h2>:wrench: Tecnologias utilizadas:</h2>
+<div align="center">
+
+  <img src="https://github.com/EdnaldoLuiz/TaskMe-CRUD/assets/112354693/a95db52c-43c8-4cfd-958e-8fb9d954a056">
+</div>
 
 
