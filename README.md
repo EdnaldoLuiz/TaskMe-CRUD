@@ -1,4 +1,8 @@
  <h1 align="center">TaskMe-CRUD</h1>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/license-MIT-green">
+</div>
  
  <h2>🛠️ Funcionalidades:</h2>
  <table>
@@ -46,7 +50,6 @@
 
 <h2>:wrench: Tecnologias utilizadas:</h2>
 <div align="center">
-
   <img src="https://github.com/EdnaldoLuiz/TaskMe-CRUD/assets/112354693/a95db52c-43c8-4cfd-958e-8fb9d954a056">
 </div>
 
